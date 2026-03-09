@@ -122,7 +122,7 @@ const Location = () => {
               <Button
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground flex-1"
-                onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${contactInfo.coordinates.lat},${contactInfo.coordinates.lng}`, '_blank')}
+                onClick={() => window.open('https://www.google.com/maps/place/Crispello+Burger/@35.5445673,6.1683767,17z/data=!3m1!4b1!4m6!3m5!1s0x12f411007c898599:0x919b0decd0bf98ea!8m2!3d35.5445673!4d6.1709516!16s%2Fg%2F11y3_n4_l4', '_blank')}
               >
                 <Navigation className="h-4 w-4 mr-2" />
                 Get Directions
