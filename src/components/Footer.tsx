@@ -8,12 +8,12 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Instagram,
-      href: 'https://instagram.com/crispello_batna',
+      href: 'https://www.instagram.com/crispello.burger/',
       label: 'Instagram'
     },
     {
       icon: Facebook,
-      href: 'https://facebook.com/crispello.batna',
+      href: 'https://web.facebook.com/profile.php?id=61575529250448',
       label: 'Facebook'
     },
     {
@@ -50,9 +50,9 @@ const Footer = () => {
                 Crispello
               </span>
             </div>
-            
+
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Batna's ultimate burger experience. Serving premium quality burgers, 
+              Batna's ultimate burger experience. Serving premium quality burgers,
               wraps, and sides 24/7 with passion and excellence.
             </p>
 
@@ -117,14 +117,15 @@ const Footer = () => {
                   Batna 05000, Algeria
                 </p>
               </div>
-              
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+
+              <div className="flex items-start space-x-3">
+                <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <p className="text-muted-foreground text-sm">
-                  0661-234-567
+                  0661-234-567<br />
+                  0793-034-063
                 </p>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-primary flex-shrink-0" />
                 <p className="text-muted-foreground text-sm">
@@ -148,7 +149,7 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
               Follow us on social media for the latest updates, special offers, and delicious content!
             </p>
-            
+
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -177,7 +178,7 @@ const Footer = () => {
           <p className="text-muted-foreground text-sm">
             © {currentYear} Crispello Burger & Fries. All rights reserved.
           </p>
-          
+
           <p className="text-muted-foreground text-sm">
             Made with <span className="text-primary">❤</span> in Batna, Algeria
           </p>

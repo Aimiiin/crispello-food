@@ -7,6 +7,7 @@ const Location = () => {
   const contactInfo = {
     address: "Avenue de l'Indépendance, Batna 05000, Algeria",
     phone: "0661-234-567",
+    phone2: "0793-034-063",
     hours: "24 Hours • Open Every Day",
     coordinates: { lat: 35.5559, lng: 6.1741 }
   };
@@ -81,7 +82,8 @@ const Location = () => {
                   <div>
                     <h3 className="font-semibold text-lg mb-2 text-foreground">Call Us</h3>
                     <p className="text-muted-foreground">
-                      {contactInfo.phone}
+                      {contactInfo.phone}<br />
+                      {contactInfo.phone2}
                     </p>
                     <p className="text-sm text-muted-foreground mt-1">
                       For reservations and orders
