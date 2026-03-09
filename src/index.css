@@ -95,8 +95,8 @@
 
 /* Premium animations */
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 20px hsl(24 95% 53% / 0.3); }
-  50% { box-shadow: 0 0 40px hsl(24 95% 53% / 0.6); }
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(255, 140, 0, 0.5)); }
+  50% { filter: drop-shadow(0 0 28px rgba(255, 140, 0, 0.85)); }
 }
 
 @keyframes float {
@@ -144,6 +144,19 @@
   }
   
   .glow-effect {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-container img {
+    width: 320px;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.7));
     animation: glow-pulse 3s ease-in-out infinite;
   }
   

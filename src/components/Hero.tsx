@@ -19,11 +19,12 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="mb-8"
         >
-          <img 
-            src={logoFull} 
-            alt="Crispello Burger & Fries" 
-            className="w-96 h-auto mx-auto glow-effect"
-          />
+          <div className="logo-container">
+            <img
+              src={logoFull}
+              alt="Crispello Burger & Fries"
+            />
+          </div>
         </motion.div>
 
         {/* Title & Tagline */}
@@ -55,17 +56,17 @@ const Hero = () => {
             <Clock className="h-5 w-5 text-primary" />
             <span className="font-semibold text-accent">Open 24 Hours</span>
           </div>
-          
+
           <div className="premium-card p-4 flex items-center space-x-3">
             <MapPin className="h-5 w-5 text-primary" />
             <span className="text-muted-foreground">Batna, Algeria</span>
           </div>
-          
+
           <div className="premium-card p-4 flex items-center space-x-3">
             <Phone className="h-5 w-5 text-primary" />
             <span className="text-muted-foreground">0661-234-567</span>
           </div>
-          
+
           <div className="premium-card p-4 flex items-center space-x-3">
             <Star className="h-5 w-5 text-secondary fill-secondary" />
             <span className="text-muted-foreground">4.7 Rating</span>
@@ -79,16 +80,16 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="premium-button"
             onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })}
           >
             View Our Menu
           </Button>
-          
-          <Button 
-            variant="outline" 
+
+          <Button
+            variant="outline"
             size="lg"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             onClick={() => document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' })}
