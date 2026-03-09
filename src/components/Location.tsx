@@ -44,7 +44,7 @@ const Location = () => {
             Find <span className="text-gradient">Us</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Located in the heart of Batna, we're easily accessible and ready to serve you 
+            Located in the heart of Batna, we're easily accessible and ready to serve you
             the best burgers in town, any time of day or night.
           </p>
         </motion.div>
@@ -111,16 +111,16 @@ const Location = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
+              <Button
                 className="premium-button flex-1"
                 onClick={() => window.open(`tel:${contactInfo.phone}`, '_self')}
               >
                 <Phone className="h-4 w-4 mr-2" />
                 Call Now
               </Button>
-              
-              <Button 
-                variant="outline" 
+
+              <Button
+                variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground flex-1"
                 onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${contactInfo.coordinates.lat},${contactInfo.coordinates.lng}`, '_blank')}
               >
@@ -140,14 +140,17 @@ const Location = () => {
           >
             {/* Interactive Map */}
             <div className="premium-card p-6">
-              <div className="aspect-video bg-gradient-to-br from-muted to-muted/50 rounded-lg flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <MapPin className="h-12 w-12 mx-auto mb-4 text-primary" />
-                  <h3 className="font-semibold mb-2">Interactive Map</h3>
-                  <p className="text-sm">
-                    Click "Get Directions" to view our location on Google Maps
-                  </p>
-                </div>
+              <div className="map-placeholder aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.369837525786!2d6.168376675904542!3d35.54456727263174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f411007c898599%3A0x919b0decd0bf98ea!2sCrispello%20Burger!5e0!3m2!1sen!2sdz!4v1773017349967!5m2!1sen!2sdz"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Crispello Burger Location"
+                ></iframe>
               </div>
             </div>
 
