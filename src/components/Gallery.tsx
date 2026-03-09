@@ -59,7 +59,7 @@ const Gallery = () => {
         </motion.div>
 
         {/* Image Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
           {images.map((image, index) => (
             <motion.div
               key={index}

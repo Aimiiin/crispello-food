@@ -141,8 +141,8 @@ const Location = () => {
             className="space-y-6"
           >
             {/* Interactive Map */}
-            <div className="premium-card p-6">
-              <div className="map-placeholder aspect-video min-h-[220px] rounded-lg overflow-hidden">
+            <div className="premium-card p-2 md:p-6">
+              <div className="map-placeholder w-full h-[280px] md:aspect-video md:h-auto md:min-h-[220px] rounded-lg overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.369837525786!2d6.168376675904542!3d35.54456727263174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f411007c898599%3A0x919b0decd0bf98ea!2sCrispello%20Burger!5e0!3m2!1sen!2sdz!4v1773017349967!5m2!1sen!2sdz"
                   width="100%"

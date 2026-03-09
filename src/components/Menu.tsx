@@ -77,7 +77,7 @@ const Menu = () => {
               <div className="flex-1 h-px bg-border"></div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
               {category.items.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -87,10 +87,24 @@ const Menu = () => {
                   viewport={{ once: true }}
                   whileHover={{ y: -5 }}
                 >
-                  <Card className="premium-card h-full hover:shadow-premium transition-all duration-300">
+                  {/* Mobile compact card */}
+                  <div className="md:hidden premium-card p-2 flex flex-col items-center text-center h-full">
+                    <div className="w-full aspect-square bg-gradient-to-br from-muted to-muted/50 rounded-lg mb-2 flex items-center justify-center border border-border/20">
+                      <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <p className="text-xs font-bold text-foreground leading-tight mb-1 line-clamp-2">{item.name}</p>
+                    <span className="text-xs font-bold text-gradient mb-1">{item.price}</span>
+                    <button className="w-full py-1 text-xs bg-primary text-primary-foreground rounded font-medium mt-auto">
+                      Order
+                    </button>
+                  </div>
+
+                  {/* Desktop full card */}
+                  <Card className="hidden md:flex flex-col premium-card h-full hover:shadow-premium transition-all duration-300">
                     <CardHeader>
-                      {/* Image Placeholder */}
-                      <div className="w-full h-36 md:h-48 bg-gradient-to-br from-muted to-muted/50 rounded-lg mb-4 flex items-center justify-center border border-border/20">
+                      <div className="w-full h-48 bg-gradient-to-br from-muted to-muted/50 rounded-lg mb-4 flex items-center justify-center border border-border/20">
                         <div className="text-center text-muted-foreground">
                           <div className="w-16 h-16 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
                             <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,12 +114,10 @@ const Menu = () => {
                           <p className="text-sm">Image coming soon</p>
                         </div>
                       </div>
-
                       <CardTitle className="text-xl font-bold text-foreground mb-2">
                         {item.name}
                       </CardTitle>
                     </CardHeader>
-
                     <CardContent>
                       <p className="text-muted-foreground mb-4 flex-1">
                         {item.description}

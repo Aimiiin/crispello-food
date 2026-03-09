@@ -190,10 +190,16 @@
   }
 
   .logo-container img {
-    width: 200px;
+    width: 160px;
     height: auto;
     filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.7));
     animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  @media (min-width: 480px) {
+    .logo-container img {
+      width: 200px;
+    }
   }
 
   @media (min-width: 640px) {
