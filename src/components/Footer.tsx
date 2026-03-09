@@ -34,7 +34,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gradient-to-t from-background to-muted/20 border-t border-border/20">
-      <div className="container mx-auto px-4 lg:px-8 py-16">
+      <div className="container mx-auto px-4 lg:px-8 py-10 md:py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <motion.div

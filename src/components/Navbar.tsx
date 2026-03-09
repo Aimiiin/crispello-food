@@ -30,9 +30,9 @@ const Navbar = () => {
             whileTap={{ scale: 0.95 }}
             className="flex items-center space-x-3"
           >
-            <img 
-              src={logoSimple} 
-              alt="Crispello" 
+            <img
+              src={logoSimple}
+              alt="Crispello"
               className="h-10 w-auto"
             />
             <span className="font-display font-bold text-xl text-gradient">
@@ -93,15 +93,19 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block px-4 py-2 text-foreground hover:text-primary transition-colors duration-200"
+                  className="block px-4 py-3 text-foreground hover:text-primary transition-colors duration-200 text-lg font-medium border-b border-border/10"
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="px-4 py-2 space-y-2 border-t border-border/20">
+              <div className="px-4 py-3 space-y-2 border-t border-border/20">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <Phone className="h-4 w-4 text-primary" />
-                  <span>0661-234-567</span>
+                  <a href="tel:0661234567" className="hover:text-primary">0661-234-567</a>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                  <Phone className="h-4 w-4 text-primary" />
+                  <a href="tel:0793034063" className="hover:text-primary">0793-034-063</a>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <MapPin className="h-4 w-4 text-primary" />

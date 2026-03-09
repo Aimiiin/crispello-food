@@ -39,7 +39,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-b from-background to-muted/20">
+    <section id="gallery" className="py-12 md:py-20 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -53,7 +53,7 @@ const Gallery = () => {
             Our <span className="text-gradient">Gallery</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Take a visual journey through our delicious food and welcoming restaurant atmosphere. 
+            Take a visual journey through our delicious food and welcoming restaurant atmosphere.
             Every image tells a story of quality, taste, and exceptional dining experience.
           </p>
         </motion.div>
@@ -77,7 +77,7 @@ const Gallery = () => {
                   alt={image.alt}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                
+
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4">
@@ -115,11 +115,11 @@ const Gallery = () => {
             >
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute -top-12 right-0 p-2 text-foreground hover:text-primary transition-colors"
+                className="absolute -top-12 right-0 p-3 text-foreground hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               >
                 <X className="h-8 w-8" />
               </button>
-              
+
               <img
                 src={selectedImage}
                 alt="Full size"

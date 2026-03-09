@@ -41,7 +41,7 @@ const Menu = () => {
   ];
 
   return (
-    <section id="menu" className="py-20 bg-gradient-to-b from-muted/20 to-background">
+    <section id="menu" className="py-12 md:py-20 bg-gradient-to-b from-muted/20 to-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -55,7 +55,7 @@ const Menu = () => {
             Our <span className="text-gradient">Menu</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover our carefully crafted selection of premium burgers, wraps, and sides. 
+            Discover our carefully crafted selection of premium burgers, wraps, and sides.
             Each item is prepared fresh to order with the finest ingredients.
           </p>
         </motion.div>
@@ -90,7 +90,7 @@ const Menu = () => {
                   <Card className="premium-card h-full hover:shadow-premium transition-all duration-300">
                     <CardHeader>
                       {/* Image Placeholder */}
-                      <div className="w-full h-48 bg-gradient-to-br from-muted to-muted/50 rounded-lg mb-4 flex items-center justify-center border border-border/20">
+                      <div className="w-full h-36 md:h-48 bg-gradient-to-br from-muted to-muted/50 rounded-lg mb-4 flex items-center justify-center border border-border/20">
                         <div className="text-center text-muted-foreground">
                           <div className="w-16 h-16 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
                             <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,12 +100,12 @@ const Menu = () => {
                           <p className="text-sm">Image coming soon</p>
                         </div>
                       </div>
-                      
+
                       <CardTitle className="text-xl font-bold text-foreground mb-2">
                         {item.name}
                       </CardTitle>
                     </CardHeader>
-                    
+
                     <CardContent>
                       <p className="text-muted-foreground mb-4 flex-1">
                         {item.description}
@@ -117,7 +117,7 @@ const Menu = () => {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                          className="px-4 py-2 min-h-[44px] bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm"
                         >
                           Order Now
                         </motion.button>

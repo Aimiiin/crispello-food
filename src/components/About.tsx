@@ -29,7 +29,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-background to-muted/20">
+    <section id="about" className="py-12 md:py-20 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -43,7 +43,7 @@ const About = () => {
             Our <span className="text-gradient">Story</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Born in the heart of Batna, Crispello represents a passion for exceptional burgers 
+            Born in the heart of Batna, Crispello represents a passion for exceptional burgers
             and an unwavering commitment to quality and taste.
           </p>
         </motion.div>
@@ -60,18 +60,18 @@ const About = () => {
               Crafting Excellence Since Day One
             </h3>
             <p className="text-lg text-muted-foreground mb-6">
-              At Crispello, we believe that a great burger is more than just food—it's an experience. 
-              Our journey began with a simple mission: to serve the most delicious, high-quality burgers 
+              At Crispello, we believe that a great burger is more than just food—it's an experience.
+              Our journey began with a simple mission: to serve the most delicious, high-quality burgers
               in Batna using only the freshest ingredients and time-honored cooking techniques.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              From our signature beef patties to our hand-cut fries, everything is prepared with 
-              meticulous attention to detail. We source our ingredients locally whenever possible, 
+              From our signature beef patties to our hand-cut fries, everything is prepared with
+              meticulous attention to detail. We source our ingredients locally whenever possible,
               supporting our community while ensuring the freshest flavors in every bite.
             </p>
             <p className="text-lg text-muted-foreground">
-              Whether you're craving our classic Crispello burger or one of our specialty creations, 
-              every meal is crafted with love and served with a smile. Come taste the difference 
+              Whether you're craving our classic Crispello burger or one of our specialty creations,
+              every meal is crafted with love and served with a smile. Come taste the difference
               that passion makes.
             </p>
           </motion.div>
@@ -81,24 +81,24 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
           >
             <div className="space-y-4">
-              <img 
-                src={restaurantInterior1} 
-                alt="Crispello Restaurant Interior" 
+              <img
+                src={restaurantInterior1}
+                alt="Crispello Restaurant Interior"
                 className="w-full rounded-xl shadow-lg hover:shadow-premium transition-shadow duration-300"
               />
-              <img 
-                src={foodBurger1} 
-                alt="Crispello Burger" 
+              <img
+                src={foodBurger1}
+                alt="Crispello Burger"
                 className="w-full rounded-xl shadow-lg hover:shadow-premium transition-shadow duration-300"
               />
             </div>
             <div className="mt-8">
-              <img 
-                src={restaurantInterior2} 
-                alt="Crispello Dining Area" 
+              <img
+                src={restaurantInterior2}
+                alt="Crispello Dining Area"
                 className="w-full rounded-xl shadow-lg hover:shadow-premium transition-shadow duration-300"
               />
             </div>

@@ -49,17 +49,16 @@ const Reviews = () => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
-        className={`h-5 w-5 ${
-          i < rating
+        className={`h-5 w-5 ${i < rating
             ? 'text-secondary fill-secondary'
             : 'text-muted-foreground'
-        }`}
+          }`}
       />
     ));
   };
 
   return (
-    <section id="reviews" className="py-20 bg-gradient-to-b from-muted/20 to-background">
+    <section id="reviews" className="py-12 md:py-20 bg-gradient-to-b from-muted/20 to-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -73,7 +72,7 @@ const Reviews = () => {
             What Our <span className="text-gradient">Customers Say</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Don't just take our word for it. Here's what our valued customers 
+            Don't just take our word for it. Here's what our valued customers
             have to say about their Crispello experience.
           </p>
 

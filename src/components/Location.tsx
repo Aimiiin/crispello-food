@@ -31,7 +31,7 @@ const Location = () => {
   ];
 
   return (
-    <section id="location" className="py-20 bg-gradient-to-b from-background to-muted/20">
+    <section id="location" className="py-12 md:py-20 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -142,7 +142,7 @@ const Location = () => {
           >
             {/* Interactive Map */}
             <div className="premium-card p-6">
-              <div className="map-placeholder aspect-video rounded-lg overflow-hidden">
+              <div className="map-placeholder aspect-video min-h-[220px] rounded-lg overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.369837525786!2d6.168376675904542!3d35.54456727263174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f411007c898599%3A0x919b0decd0bf98ea!2sCrispello%20Burger!5e0!3m2!1sen!2sdz!4v1773017349967!5m2!1sen!2sdz"
                   width="100%"

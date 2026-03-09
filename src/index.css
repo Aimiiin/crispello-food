@@ -47,7 +47,7 @@
     --gradient-secondary: linear-gradient(135deg, hsl(45 93% 58%), hsl(35 100% 70%));
     --gradient-hero: linear-gradient(135deg, hsl(220 8% 8% / 0.95), hsl(220 6% 10% / 0.9));
     --gradient-card: linear-gradient(135deg, hsl(220 6% 12%), hsl(220 4% 14%));
-    
+
     /* Premium shadows */
     --shadow-premium: 0 20px 60px hsl(24 95% 53% / 0.15);
     --shadow-card: 0 10px 30px hsl(220 8% 4% / 0.4);
@@ -95,23 +95,51 @@
 
 /* Premium animations */
 @keyframes glow-pulse {
-  0%, 100% { filter: drop-shadow(0 0 12px rgba(255, 140, 0, 0.5)); }
-  50% { filter: drop-shadow(0 0 28px rgba(255, 140, 0, 0.85)); }
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 12px rgba(255, 140, 0, 0.5));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 28px rgba(255, 140, 0, 0.85));
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes scale-in {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @layer base {
@@ -121,11 +149,19 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  button,
+  a {
+    touch-action: manipulation;
   }
 }
 
@@ -134,15 +170,15 @@
   .premium-card {
     @apply bg-gradient-to-br from-card to-card/80 border border-border/50 rounded-xl shadow-lg backdrop-blur-sm;
   }
-  
+
   .premium-button {
     @apply bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-premium;
   }
-  
+
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
-  
+
   .glow-effect {
     animation: glow-pulse 3s ease-in-out infinite;
   }
@@ -154,20 +190,32 @@
   }
 
   .logo-container img {
-    width: 320px;
+    width: 200px;
     height: auto;
     filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.7));
     animation: glow-pulse 3s ease-in-out infinite;
   }
-  
+
+  @media (min-width: 640px) {
+    .logo-container img {
+      width: 280px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .logo-container img {
+      width: 320px;
+    }
+  }
+
   .float-animation {
     animation: float 6s ease-in-out infinite;
   }
-  
+
   .slide-up {
     animation: slide-up 0.8s ease-out forwards;
   }
-  
+
   .scale-in {
     animation: scale-in 0.6s ease-out forwards;
   }

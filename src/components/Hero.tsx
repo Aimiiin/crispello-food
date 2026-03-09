@@ -5,7 +5,7 @@ import logoFull from '@/assets/logo-full.png';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
@@ -34,13 +34,13 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-8"
         >
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-4">
+          <h1 className="font-display text-4xl md:text-7xl lg:text-8xl font-bold mb-4">
             <span className="text-gradient">Crispello</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-2">
+          <p className="text-base md:text-2xl text-muted-foreground mb-2">
             Batna's Ultimate Burger Experience
           </p>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-sm md:text-lg text-muted-foreground">
             Premium burgers crafted with passion and served with excellence
           </p>
         </motion.div>
@@ -50,26 +50,26 @@ const Hero = () => {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-3 mb-10"
         >
-          <div className="premium-card p-4 flex items-center space-x-3">
-            <Clock className="h-5 w-5 text-primary" />
-            <span className="font-semibold text-accent">Open 24 Hours</span>
+          <div className="premium-card p-3 flex items-center space-x-2">
+            <Clock className="h-4 w-4 text-primary flex-shrink-0" />
+            <span className="font-semibold text-accent text-sm">Open 24 Hours</span>
           </div>
 
-          <div className="premium-card p-4 flex items-center space-x-3">
-            <MapPin className="h-5 w-5 text-primary" />
-            <span className="text-muted-foreground">Batna, Algeria</span>
+          <div className="premium-card p-3 flex items-center space-x-2">
+            <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+            <span className="text-muted-foreground text-sm">Batna, Algeria</span>
           </div>
 
-          <div className="premium-card p-4 flex items-center space-x-3">
-            <Phone className="h-5 w-5 text-primary" />
-            <span className="text-muted-foreground">0661-234-567</span>
+          <div className="premium-card p-3 flex items-center space-x-2">
+            <Phone className="h-4 w-4 text-primary flex-shrink-0" />
+            <span className="text-muted-foreground text-sm">0661-234-567</span>
           </div>
 
-          <div className="premium-card p-4 flex items-center space-x-3">
-            <Star className="h-5 w-5 text-secondary fill-secondary" />
-            <span className="text-muted-foreground">4.7 Rating</span>
+          <div className="premium-card p-3 flex items-center space-x-2">
+            <Star className="h-4 w-4 text-secondary fill-secondary flex-shrink-0" />
+            <span className="text-muted-foreground text-sm">4.7 Rating</span>
           </div>
         </motion.div>
 
