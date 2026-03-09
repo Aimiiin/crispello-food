@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Crispello Design System - Dark luxury theme with burger orange accents */
+
+@layer base {
+  :root {
+    /* Dark luxury background */
+    --background: 220 8% 8%;
+    --foreground: 0 0% 98%;
+
+    /* Premium card system */
+    --card: 220 6% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 6% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Burger orange primary color */
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Golden yellow secondary */
+    --secondary: 45 93% 58%;
+    --secondary-foreground: 220 8% 8%;
+
+    /* Muted dark surfaces */
+    --muted: 220 6% 18%;
+    --muted-foreground: 220 3% 65%;
+
+    /* Orange accent variations */
+    --accent: 16 100% 66%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 6% 20%;
+    --input: 220 6% 15%;
+    --ring: 24 95% 53%;
+
+    --radius: 12px;
+
+    /* Premium gradient system */
+    --gradient-primary: linear-gradient(135deg, hsl(24 95% 53%), hsl(16 100% 66%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 93% 58%), hsl(35 100% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 8% 8% / 0.95), hsl(220 6% 10% / 0.9));
+    --gradient-card: linear-gradient(135deg, hsl(220 6% 12%), hsl(220 4% 14%));
+    
+    /* Premium shadows */
+    --shadow-premium: 0 20px 60px hsl(24 95% 53% / 0.15);
+    --shadow-card: 0 10px 30px hsl(220 8% 4% / 0.4);
+    --shadow-glow: 0 0 40px hsl(24 95% 53% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 8% 8%;
+    --foreground: 0 0% 98%;
+    --card: 220 6% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 220 6% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 45 93% 58%;
+    --secondary-foreground: 220 8% 8%;
+    --muted: 220 6% 18%;
+    --muted-foreground: 220 3% 65%;
+    --accent: 16 100% 66%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 6% 20%;
+    --input: 220 6% 15%;
+    --ring: 24 95% 53%;
+  }
+}
+
+/* Premium animations */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px hsl(24 95% 53% / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(24 95% 53% / 0.6); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Premium component classes */
+@layer components {
+  .premium-card {
+    @apply bg-gradient-to-br from-card to-card/80 border border-border/50 rounded-xl shadow-lg backdrop-blur-sm;
+  }
+  
+  .premium-button {
+    @apply bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-premium;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  .glow-effect {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+  
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+  
+  .scale-in {
+    animation: scale-in 0.6s ease-out forwards;
+  }
+}
